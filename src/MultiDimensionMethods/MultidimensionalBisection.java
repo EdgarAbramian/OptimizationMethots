@@ -28,6 +28,7 @@ public class MultidimensionalBisection {
         }
         System.out.printf("biSect::function arg range    : %s\n", function.evaluate(center));
         System.out.printf("biSect::function probes count : %s\n", 2 * iterations);
+
         return VectorProcedures.center(lhs, rhs);
     }
     public static double[] minimizeBisect(FunctionND function, double[] left, double[] right, double eps) {
@@ -55,9 +56,10 @@ public class MultidimensionalBisection {
 
         // N-Dimensional Bisect Method
         double[] result = MultidimensionalBisection.minimizeBisect(func, left, right);
-
+        System.out.println(func.evaluate(result));
     }
 }
+
 
 
 
