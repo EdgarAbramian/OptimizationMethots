@@ -48,4 +48,11 @@ public class VectorProcedures{
         }
         return Math.sqrt(sum);
     }
+    public static double distance(double[] x, double[] y) {
+        double sum = 0;
+        for (int i = 0; i < x.length; i++) {
+            sum += Math.pow(x[i] - y[i], 2);
+        }
+        return Math.sqrt(sum);
+    }
 }

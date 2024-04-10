@@ -17,6 +17,6 @@ public class NumericCommon {
     public static boolean      SHOW_SIMPLEX_DEBUG_LOG = false;
     public static boolean      SHOW_MATRIX_DEBUG_LOG  = false;
     public static boolean      NUMBER_RATIONAL_FORMAT = true;
+    public static final float    STEP_SIZE_COORDINATE_DESCENT    = 0.001F;
 
-    // public static boolean      ITERATOR_BASED_IMPLEMENTATION = true;
 }

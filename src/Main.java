@@ -1,6 +1,8 @@
 import MultiDimensionMethods.MultidimensionalBisection;
 import MultiDimensionMethods.MultidimensionalFibonacci;
 import MultiDimensionMethods.MultidimensionalGoldenRatio;
+import MultiDimensionMethods.MultidimensionalCoordinateDescent;
+
 import functionalInterfaces.FunctionND;
 
 import java.util.function.Function;
@@ -33,11 +35,13 @@ public class Main {
 
         // N-Dimensional Methods
         System.out.println("<<<MultidimensionalBisection>>>");
-        MultidimensionalBisection.minimizeBisect(funcND, left, right);
+        MultidimensionalBisection.minimizeBisect(funcND, left, right, true);
         System.out.println("\n\n<<<MultidimensionalGoldenRatio>>>");
         MultidimensionalGoldenRatio.minimizeGoldenRatio(funcND, left, right);
         System.out.println("\n\n<<<MultidimensionalFibonacci>>>");
         MultidimensionalFibonacci.minimizeFibonacci(funcND, left, right);
+        System.out.println("\n\n<<<MultidimensionalCoordinateDescent>>>");
+        MultidimensionalCoordinateDescent.minimizeCoordinateDescent(new double[] { 0, 0, 1.2}, 0.01, 1000, 0.0001, funcND);
     }
 
 }
