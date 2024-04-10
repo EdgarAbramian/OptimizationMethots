@@ -41,7 +41,9 @@ public class Main {
         System.out.println("\n\n<<<MultidimensionalFibonacci>>>");
         MultidimensionalFibonacci.minimizeFibonacci(funcND, left, right);
         System.out.println("\n\n<<<MultidimensionalCoordinateDescent>>>");
-        MultidimensionalCoordinateDescent.minimizeCoordinateDescent(new double[] { 0, 0, 1.2}, 0.01, 1000, 0.0001, funcND);
+        Function<double[], Double> myFunction1 = (x) -> Math.pow(x[0], 3) + Math.pow(x[1], 2) + x[2];
+        FunctionND funcND1 = new FunctionND(myFunction1);
+        MultidimensionalCoordinateDescent.minimizeCoordinateDescent(new double[] { 2, 1, 1.2}, 0.01, 1000, 0.0001, funcND1);
     }
 
 }
